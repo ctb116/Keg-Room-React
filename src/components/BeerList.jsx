@@ -55,7 +55,6 @@ var masterKegList = [
 function BeerList(){
   return (
     <div>
-      <hr/>
       {masterKegList.map((keg, index) =>
         <Beer name={keg.name}
           brewer={keg.brewer}
