@@ -36,6 +36,10 @@ module.exports = {
           }
       },
       {
+        test:/.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -47,9 +51,6 @@ module.exports = {
           plugins: [
             "react-hot-loader/babel",
             "styled-jsx/babel",
-            "bootstrap",
-            "css-loader",
-            "style-loader",
           ]
         }
       },

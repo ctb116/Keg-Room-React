@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 function Beer(props){
   
   return (
@@ -10,7 +11,7 @@ function Beer(props){
       
       }
       `}</style>
-
+<button className="btn btn-primary">Primary</button>
       <table class="table">
         <thead>
           <tr>
