@@ -7,9 +7,12 @@ function Beer(props){
   return (
     <div>
       <style  jsx>{`
+        div {
+          z-index: -1;
+        }
 
       `}</style>
-        
+        <p>{props.name}</p>
       <table className="table table-hover">
         <thead>
           <tr>
@@ -23,23 +26,24 @@ function Beer(props){
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">{props.masterKegList.map((beerlist, index) =>
-              <td key={index}>
-                {beerlist}
-              </td>
-            )}
-            </th>
-          </tr>
+
+            <p>{props.name}</p>
+      
         </tbody>
       </table>  
+
     </div>
       
   );
 }
   
 Beer.propTypes = {
-  masterKegList: PropTypes.string,
+  name: PropTypes.string,
+  brewer: PropTypes.string,
+  description: PropTypes.string,
+  abv: PropTypes.string,
+  price: PropTypes.string,
+  remaining: PropTypes.string,
 };
   
 export default Beer;
