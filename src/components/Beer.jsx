@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Beer(props){
-
-return (
-  <div>
+  
+  return (
+    <div>
     <style  jsx>{`
-
-        `}</style>
+      
+      `}</style>
       <p>{props.name}</p>
       <p>{props.brewer}</p>
       <p>{props.description}</p>
@@ -15,13 +15,18 @@ return (
       <p>{props.price}</p>
       <p>{props.remaining}</p>
       
-    </div>
-
-  );
-}
-Products.propTypes = {
-  month: PropTypes.string,
-  selection: PropTypes.string,
-};
-
-export default Beer;
+      </div>
+      
+    );
+  }
+  
+  Beer.propTypes = {
+    name: PropTypes.string,
+    brewer: PropTypes.string,
+    description: PropTypes.string,
+    abv: PropTypes.string,
+    price: PropTypes.string,
+    remaining: PropTypes.string,
+  };
+  
+  export default Beer;
