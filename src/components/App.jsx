@@ -14,8 +14,11 @@ function App(){
   };
   return (
     <div style={styles}>
-      <style jsx>{`
+      <style global jsx>{`
         font-family: Helvetica;
+        body {
+          background-color: #d9dadc;
+        }
       `}</style>
       <Header/>
       <BeerList/>

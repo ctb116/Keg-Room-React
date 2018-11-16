@@ -5,30 +5,49 @@ function Beer(props){
   
   return (
     <div>
-    <style  jsx>{`
+      <style  jsx>{`
       div {
-        border: 1px solid black;
+      
       }
       `}</style>
-      <h3>{props.name}</h3>
-      <p>{props.brewer}</p>
-      <p>{props.description}</p>
-      <p>{props.abv}</p>
-      <p>{props.price}</p>
-      <p>{props.remaining}</p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Brewer</th>
+            <th scope="col">Description</th>
+            <th scope="col">ABV</th>
+            <th scope="col">Price</th>
+            <th scope="col">Remaining</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{props.name}</td>
+            <td>{props.brewer}</td>
+            <td>{props.description}</td>
+            <td>{props.abv}</td>
+            <td>{props.price}</td>
+            <td>{props.remaining}</td>
+          </tr>
+        </tbody>
+      </table>
       
-      </div>
+    </div>
       
-    );
-  }
+  );
+}
   
-  Beer.propTypes = {
-    name: PropTypes.string,
-    brewer: PropTypes.string,
-    description: PropTypes.string,
-    abv: PropTypes.string,
-    price: PropTypes.string,
-    remaining: PropTypes.string,
-  };
+Beer.propTypes = {
+  name: PropTypes.string,
+  brewer: PropTypes.string,
+  description: PropTypes.string,
+  abv: PropTypes.string,
+  price: PropTypes.string,
+  remaining: PropTypes.string,
+};
   
-  export default Beer;
+export default Beer;

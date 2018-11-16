@@ -18,10 +18,11 @@ function Header(){
           width: 100%;
           overflow: hidden;
           margin-bottom: 10px;
+          margin-top: -8px;
         }
 
       `}</style>
-    <Logo/>
+      <Logo/>
 
     </div>
 

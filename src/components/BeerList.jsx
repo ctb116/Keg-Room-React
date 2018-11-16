@@ -55,15 +55,15 @@ const masterKegList = [
 function BeerList(){
   return (
     <div>
-    {masterKegList.map((beerlist, index) =>
-      <Beer name={beerlist.name}
-      brewer={beerlist.brewer}
-      description={beerlist.description}
-      abv={beerlist.abv}
-      price={beerlist.price}
-      remaining={beerlist.remaining}
-      key={index}/>
-    )}
+      {masterKegList.map((beerlist, index) =>
+        <Beer name={beerlist.name}
+          brewer={beerlist.brewer}
+          description={beerlist.description}
+          abv={beerlist.abv}
+          price={beerlist.price}
+          remaining={beerlist.remaining}
+          key={index}/>
+      )}
     </div>
   );
 }

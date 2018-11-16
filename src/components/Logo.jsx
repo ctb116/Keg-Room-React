@@ -15,7 +15,7 @@ function Logo(){
 
       `}</style>
     
-    <img src="https://c1.staticflickr.com/6/5179/5557037531_d3f66a6044_b.jpg"></img>
+      <img src="https://c1.staticflickr.com/6/5179/5557037531_d3f66a6044_b.jpg"></img>
 
     </div>
 
