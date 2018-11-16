@@ -7,6 +7,11 @@ function Logo(){
   return (
     <div>
       <style jsx>{`
+        img {
+          align-items: center;
+          height: 300px;
+          width: 360px;
+        }
 
       `}</style>
     
