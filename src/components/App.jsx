@@ -1,6 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
+import BeerList from './BeerList';
 
 /*
   import { Link } from 'react-router-dom';
@@ -16,6 +17,7 @@ function App(){
         font-family: Helvetica;
       `}</style>
       Tap-Room
+      <BeerList/>
       {/* <Switch>
         <Route exact path='/' component={} />
       </Switch> */}
