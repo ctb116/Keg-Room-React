@@ -1,8 +1,8 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
-import BeerList from './BeerList';
 import Header from './Header';
+import Beer from './Beer';
 
 /*
   import { Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ function App(){
         }
       `}</style>
       <Header/>
-      <BeerList/>
+      <Beer/>
       {/* <Switch>
         <Route exact path='/' component={} />
       </Switch> */}
