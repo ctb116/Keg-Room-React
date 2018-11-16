@@ -3,6 +3,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Beer from './Beer';
+import BeerList from './BeerList';
 
 /*
   import { Link } from 'react-router-dom';
@@ -22,6 +23,7 @@ function App(){
       `}</style>
       <Header/>
       <Beer/>
+      <BeerList/>
       {/* <Switch>
         <Route exact path='/' component={} />
       </Switch> */}

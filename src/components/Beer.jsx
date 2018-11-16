@@ -3,16 +3,13 @@ import PropTypes from 'prop-types';
 
 
 function Beer(props){
-  
+
   return (
     <div>
       <style  jsx>{`
-        div {
-          z-index: -1;
-        }
 
       `}</style>
-        <p>{props.name}</p>
+
       <table className="table table-hover">
         <thead>
           <tr>
@@ -26,17 +23,22 @@ function Beer(props){
           </tr>
         </thead>
         <tbody>
-
-            <p>{props.name}</p>
-      
+          <tr>
+            <th scope="row">1</th>
+            <td>{props.name}</td>
+            <td>{props.brewer}</td>
+            <td>{props.description}</td>
+            <td>{props.abv}</td>
+            <td>{props.price}</td>
+            <td>{props.remaining}</td>
+          </tr>
         </tbody>
-      </table>  
+      </table>
 
     </div>
-      
   );
 }
-  
+
 Beer.propTypes = {
   name: PropTypes.string,
   brewer: PropTypes.string,
@@ -45,5 +47,5 @@ Beer.propTypes = {
   price: PropTypes.string,
   remaining: PropTypes.string,
 };
-  
+
 export default Beer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Beer from './Beer';
 
-const masterKegList = [
+var masterKegList = [
   {
     name: 'Ruby Zozzle',
     brewer: 'Hi-Wheel',
@@ -55,14 +55,15 @@ const masterKegList = [
 function BeerList(){
   return (
     <div>
-      {masterKegList.map((beerlist, index) =>
-        <Beer name={beerlist.name}
-        brewer={beerlist.brewer}
-        description={beerlist.description}
-        abv={beerlist.abv}
-        price={beerlist.price}
-        remaining={beerlist.remaining}
-        key={index}/>
+      <hr/>
+      {masterKegList.map((keg, index) =>
+        <Beer name={keg.name}
+          brewer={keg.brewer}
+          description={keg.description}
+          abv={keg.abv}
+          price={keg.price}
+          remaining={keg.remaining}
+          key={index}/>
       )}
     </div>
   );
