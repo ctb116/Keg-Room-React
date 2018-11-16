@@ -6,9 +6,11 @@ function Beer(props){
   return (
     <div>
     <style  jsx>{`
-      
+      div {
+        border: 1px solid black;
+      }
       `}</style>
-      <p>{props.name}</p>
+      <h3>{props.name}</h3>
       <p>{props.brewer}</p>
       <p>{props.description}</p>
       <p>{props.abv}</p>

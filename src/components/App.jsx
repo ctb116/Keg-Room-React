@@ -2,6 +2,7 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import BeerList from './BeerList';
+import Header from './Header';
 
 /*
   import { Link } from 'react-router-dom';
@@ -16,7 +17,7 @@ function App(){
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
-      Tap-Room
+      <Header/>
       <BeerList/>
       {/* <Switch>
         <Route exact path='/' component={} />
