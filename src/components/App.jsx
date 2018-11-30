@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Beer from './Beer';
 import BeerList from './BeerList';
-import BeerHeader from './BeerHeader';
 /*
   import { Link } from 'react-router-dom';
   <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
@@ -22,7 +21,7 @@ function App(){
         }
       `}</style>
       <Header/>
-      <BeerHeader/>
+      <BeerList/>
       {/* <Switch>
         <Route exact path='/' component={} />
       </Switch> */}

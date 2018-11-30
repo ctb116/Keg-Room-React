@@ -54,16 +54,35 @@ var masterKegList = [
 
 function BeerList(){
   return (
+
     <div>
-      {masterKegList.map((keg, index) =>
-        <Beer name={keg.name}
-          brewer={keg.brewer}
-          description={keg.description}
-          abv={keg.abv}
-          price={keg.price}
-          remaining={keg.remaining}
-          key={index}/>
+      <style  jsx>{`
+
+      `}</style>
+
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Brewer</th>
+            <th scope="col">Description</th>
+            <th scope="col">ABV</th>
+            <th scope="col">Price</th>
+            <th scope="col">Remaining</th>
+          </tr>
+        </thead>
+          <tbody>
+            {masterKegList.map((keg, index) =>
+              <Beer name={keg.name}
+                brewer={keg.brewer}
+                description={keg.description}
+                abv={keg.abv}
+                price={keg.price}
+                remaining={keg.remaining}
+                key={index}/>
       )}
+        </tbody>
+      </table>
     </div>
   );
 }
