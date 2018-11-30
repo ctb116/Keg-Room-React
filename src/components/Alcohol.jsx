@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function Beer(props){
+function Alcohol(props){
 
   return (
     <tr>
@@ -12,11 +12,12 @@ function Beer(props){
       <td>{props.abv}</td>
       <td>{props.price}</td>
       <td>{props.remaining}</td>
+      <td><button className="btn btn-danger" onClick={props.onOrderConfirmation}>Order</button></td>
     </tr>
   );
 }
 
-Beer.propTypes = {
+Alcohol.propTypes = {
   name: PropTypes.string,
   brewer: PropTypes.string,
   description: PropTypes.string,
@@ -25,4 +26,8 @@ Beer.propTypes = {
   remaining: PropTypes.string,
 };
 
-export default Beer;
+Alcohol.propTypes = {
+  onOrderConfirmation: PropTypes.func
+};
+
+export default Alcohol;

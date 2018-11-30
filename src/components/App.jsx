@@ -12,9 +12,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      clicks: 0,
+      show: true,
       masterAlcoholList: []
     };
     this.handleAddingNewAlcoholToList = this.handleAddingNewAlcoholToList.bind(this);
+    this.handleOrderConfirmation = this.handleOrderConfirmation.bind(this);
+  }
+
+  handleOrderConfirmation(){
+    this.setState({clicks: this.state.clicks +1});
   }
 
   handleAddingNewAlcoholToList(newAlcohol){
@@ -32,6 +39,8 @@ class App extends React.Component {
           background-color: #d9dadc;
         }
       `}</style>
+        <button onClick={this.handleOrderConfirmation}>Click to increment by 1</button>
+        { this.state.show ? <h2>{ this.state.clicks }</h2> : '' }
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><AlcoholList alcoholList={this.state.masterAlcoholList} />} />

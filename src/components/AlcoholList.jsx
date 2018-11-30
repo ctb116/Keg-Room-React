@@ -1,5 +1,5 @@
 import React from 'react';
-import Beer from './Beer';
+import Alcohol from './Alcohol';
 import PropTypes from 'prop-types';
 
 var masterKegList = [
@@ -26,30 +26,6 @@ var masterKegList = [
     abv: '4.7%',
     price: '3',
     remaining: '65'
-  },
-  {
-    name: 'Prismatic',
-    brewer: 'Ninkasi',
-    description: 'Juicy IPA',
-    abv:  '5.9%',
-    price: '6',
-    remaining: '75'
-  },
-  {
-    name: 'Juicy Haze',
-    brewer: 'New Belgium',
-    description: 'India Pale Ale',
-    abv:  '7.5%',
-    price: '6',
-    remaining: '18'
-  },
-  {
-    name: '8 Hop',
-    brewer: 'New Belgium',
-    description: 'Pale Ale',
-    abv:  '5.5%',
-    price: '6',
-    remaining: '58'
   }
 ];
 
@@ -71,7 +47,7 @@ function AlcoholList(props){
         </thead>
         <tbody>
           {masterKegList.map((keg, index) =>
-            <Beer name={keg.name}
+            <Alcohol name={keg.name}
               brewer={keg.brewer}
               description={keg.description}
               abv={keg.abv}
@@ -80,7 +56,7 @@ function AlcoholList(props){
               key={index}/>
           )}
           {props.alcoholList.map((items, index) =>
-            <Beer name={items.name}
+            <Alcohol name={items.name}
               brewer={items.brewer}
               description={items.description}
               abv={items.abv}
@@ -97,5 +73,6 @@ function AlcoholList(props){
 AlcoholList.propTypes = {
   alcoholList: PropTypes.array
 };
+
 
 export default AlcoholList;
