@@ -1,11 +1,21 @@
 import React from 'react';
 import Header from './Header';
+import Admin from './Admin';
 import BeerList from './BeerList';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
 
-function App(){
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterAlcoholList: []
+    };
+    this.handleAddingNewAlcoholToList = this.handleAddingNewAlcoholToList.bind(this);
+  }
+
   var styles = {
   };
   return (
@@ -19,6 +29,7 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={BeerList}/>
+        <Route path='/admin' component={Admin} />
         <Route component={Error404}/>
       </Switch>
       <BeerList/>
