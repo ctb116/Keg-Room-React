@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Admin from './Admin';
-import BeerList from './BeerList';
+import AlcoholList from './AlcoholList';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
@@ -16,10 +16,15 @@ class App extends React.Component {
     this.handleAddingNewAlcoholToList = this.handleAddingNewAlcoholToList.bind(this);
   }
 
-  var styles = {
-  };
+  handleAddingNewAlcoholToList(newAlcohol){
+  var masterAlcoholList = this.state.masterAlcoholList.slice();
+  masterAlcoholList.push(newAlcohol);
+  this.setState({masterAlcoholList: newMasterAlcoholList});
+}
+
+render() {
   return (
-    <div style={styles}>
+    <div>
       <style global jsx>{`
         font-family: Helvetica;
         body {
@@ -28,16 +33,14 @@ class App extends React.Component {
       `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={BeerList}/>
-        <Route path='/admin' component={Admin} />
+        <Route exact path='/' component={AlcoholList}/>
+        <Route path='/admin' render={()=><Admin alcoholList={this.state.masterAlcoholList} />} />
         <Route component={Error404}/>
       </Switch>
-      <BeerList/>
-      {/* <Switch>
-        <Route exact path='/' component={} />
-      </Switch> */}
     </div>
   );
+}
+
 }
 
 //App.propTypes = {

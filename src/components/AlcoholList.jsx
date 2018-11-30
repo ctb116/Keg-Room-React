@@ -52,7 +52,7 @@ var masterKegList = [
   }
 ];
 
-function BeerList(){
+function AlcoholList(){
   return (
 
     <div>
@@ -87,4 +87,4 @@ function BeerList(){
   );
 }
 
-export default BeerList;
+export default AlcoholList;
