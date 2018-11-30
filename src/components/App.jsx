@@ -1,13 +1,9 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
-import Beer from './Beer';
 import BeerList from './BeerList';
-/*
-  import { Link } from 'react-router-dom';
-  <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
-*/
+import Error404 from './Error404';
+import { Switch, Route } from 'react-router-dom';
+
 
 function App(){
   var styles = {
@@ -21,6 +17,10 @@ function App(){
         }
       `}</style>
       <Header/>
+      <Switch>
+        <Route exact path='/' component={BeerList}/>
+        <Route component={Error404}/>
+      </Switch>
       <BeerList/>
       {/* <Switch>
         <Route exact path='/' component={} />
