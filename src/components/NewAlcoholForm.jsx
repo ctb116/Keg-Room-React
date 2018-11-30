@@ -27,32 +27,32 @@ function NewAlcoholForm(props){
           type='text'
           id='name'
           placeholder='name'
-          ref={(input) => {_names = input;}}/>
+          ref={(input) => {_name = input;}}/>
         <input
           type='text'
           id='brewer'
           placeholder='brewer'
-          ref={(input) => {_location = input;}}/>
+          ref={(input) => {_brewer = input;}}/>
         <input
           type='text'
           id='description'
           placeholder='description'
-          ref={(input) => {_location = input;}}/>
+          ref={(input) => {_description = input;}}/>
         <input
           type='text'
           id='abv'
           placeholder='alcohol content'
-          ref={(input) => {_location = input;}}/>
+          ref={(input) => {_abv = input;}}/>
         <input
           type='text'
           id='price'
           placeholder='sell price'
-          ref={(input) => {_location = input;}}/>
+          ref={(input) => {_price = input;}}/>
         <input
           type='text'
           id='remaining'
           placeholder='amount in stock'
-          ref={(input) => {_location = input;}}/>
+          ref={(input) => {_remaining = input;}}/>
         <button type='submit'>Add</button>
       </form>
     </div>

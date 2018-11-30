@@ -1,5 +1,6 @@
 import React from 'react';
 import Beer from './Beer';
+import PropTypes from 'prop-types';
 
 var masterKegList = [
   {
@@ -52,14 +53,11 @@ var masterKegList = [
   }
 ];
 
-function AlcoholList(){
+function AlcoholList(props){
   return (
-
     <div>
       <style  jsx>{`
-
       `}</style>
-
       <table className="table table-hover">
         <thead>
           <tr>
@@ -71,20 +69,33 @@ function AlcoholList(){
             <th scope="col">Remaining</th>
           </tr>
         </thead>
-          <tbody>
-            {masterKegList.map((keg, index) =>
-              <Beer name={keg.name}
-                brewer={keg.brewer}
-                description={keg.description}
-                abv={keg.abv}
-                price={keg.price}
-                remaining={keg.remaining}
-                key={index}/>
-      )}
+        <tbody>
+          {masterKegList.map((keg, index) =>
+            <Beer name={keg.name}
+              brewer={keg.brewer}
+              description={keg.description}
+              abv={keg.abv}
+              price={keg.price}
+              remaining={keg.remaining}
+              key={index}/>
+          )}
+          {props.alcoholList.map((items, index) =>
+            <Beer name={items.name}
+              brewer={items.brewer}
+              description={items.description}
+              abv={items.abv}
+              price={items.price}
+              remaining={items.remaining}
+              key={index}/>
+          )}
         </tbody>
       </table>
     </div>
   );
 }
+
+AlcoholList.propTypes = {
+  alcoholList: PropTypes.array
+};
 
 export default AlcoholList;
