@@ -9,7 +9,7 @@ var masterKegList = [
     description: 'Sparkling Wine & Grapefruit',
     abv: '6.8%',
     price: '7',
-    remaining: '20'
+    remaining: 20
   },
   {
     name: 'Tart N Juicy',
@@ -17,7 +17,7 @@ var masterKegList = [
     description: 'Sour IPA',
     abv: '4.5%',
     price: '6',
-    remaining: '60'
+    remaining: 60
   },
   {
     name: 'Hamms',
@@ -25,7 +25,7 @@ var masterKegList = [
     description: 'American Lager',
     abv: '4.7%',
     price: '3',
-    remaining: '65'
+    remaining: 65
   }
 ];
 
@@ -46,14 +46,15 @@ function AlcoholList(props){
           </tr>
         </thead>
         <tbody>
-          {masterKegList.map((keg, index) =>
-            <Alcohol name={keg.name}
-              brewer={keg.brewer}
-              description={keg.description}
-              abv={keg.abv}
-              price={keg.price}
-              remaining={keg.remaining}
-              key={index}/>
+          {masterKegList.map((items, index) =>
+            <Alcohol name={items.name}
+              brewer={items.brewer}
+              description={items.description}
+              abv={items.abv}
+              price={items.price}
+              remaining={items.remaining}
+              key={index}
+              onOrderSelection={props.onOrderSelection}/>
           )}
           {props.alcoholList.map((items, index) =>
             <Alcohol name={items.name}
@@ -62,7 +63,8 @@ function AlcoholList(props){
               abv={items.abv}
               price={items.price}
               remaining={items.remaining}
-              key={index}/>
+              key={index}
+              onOrderSelection={props.onOrderSelection}/>
           )}
         </tbody>
       </table>
@@ -71,7 +73,9 @@ function AlcoholList(props){
 }
 
 AlcoholList.propTypes = {
-  alcoholList: PropTypes.array
+  alcoholList: PropTypes.array,
+  onOrderSelection: PropTypes.func.isRequired,
+  selectedTicket: PropTypes.object
 };
 
 

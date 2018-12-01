@@ -12,16 +12,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicks: 0,
-      show: true,
-      masterAlcoholList: []
+      masterAlcoholList: [],
+      selectedOrder: null
     };
     this.handleAddingNewAlcoholToList = this.handleAddingNewAlcoholToList.bind(this);
-    this.handleOrderConfirmation = this.handleOrderConfirmation.bind(this);
+    this.handleChangingOrderSelection = this.handleChangingOrderSelection.bind(this);
   }
 
-  handleOrderConfirmation(){
-    this.setState({clicks: this.state.clicks +1});
+  handleChangingOrderSelection(order){
+    this.setState({selectedOrder: order});
+    alert('this drink was ordered' + this.state.selectedOrder.name);
   }
 
   handleAddingNewAlcoholToList(newAlcohol){
@@ -39,11 +39,11 @@ class App extends React.Component {
           background-color: #d9dadc;
         }
       `}</style>
-        <button onClick={this.handleOrderConfirmation}>Click to increment by 1</button>
-        { this.state.show ? <h2>{ this.state.clicks }</h2> : '' }
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><AlcoholList alcoholList={this.state.masterAlcoholList} />} />
+          <Route exact path='/' render={()=><AlcoholList alcoholList={this.state.masterAlcoholList}
+            onOrderSelection={this.handleChangingOrderSelection}
+            selectedOrder={this.state.selectedOrder} />} />
           <Route path='/admin' render={()=><Admin alcoholList={this.state.masterAlcoholList} />} />
           <Route exact path='/newproduct' render={()=><NewAlcoholForm onNewAlcoholCreation={this.handleAddingNewAlcoholToList} />} />
           <Route component={Error404}/>

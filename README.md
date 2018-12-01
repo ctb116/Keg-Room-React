@@ -1,19 +1,46 @@
-# _Keg Room in React_
+# Alcoholic Drinks Available at the Cocoroco Bar
 
-#### _Independent Project for Epicodus, 11.16.2018_
-
-#### By _**Catherine Bradley**_
+Created 11.01.18</br>
+By _**Catherine Bradley**_</br>
+Contact: _**catherinetybradley@gmail.com**_</br>
 
 ## Description
-_This app is a remake of a previous project done in Angular._
-README prompt for Epiocus: Thoughts on the differences in development process between Angular and React. Angular and React both use components. My early impressions are that Angular's development process is more organized in use of its components. It seems that React does better when components are smaller and more specialized. This is fine for me until it comes to styling.
+A menu for patrons to order drinks at the Cocoroco Bar.
 
-Current paths in this application
-![Image of Yaktocat](https://i.imgur.com/KjFDaaE.png)
+| Patron Story |
+|----|
+| User is greeted by a splash page containing a list of all drinks available to order |
+| User can click on the red "order" button and see remaining stock of drink decrease **currently not working** |
+| in progress: Once User clicks order, User is greeted by a confirmation page asking for number of drinks and what table to deliver drinks |
 
-## Unforseen Issues/Questions
-I currently have trouble understanding how to style in React given that there are so many smaller components. I seems I am trying to style accross components most of the time.
+| Admin Story |
+|----|
+| User can navigate from the splash page to an Admin section (manually enter /admin at this time) |
+| In Admin section, User can add a new alcoholic beverage to be available to patrons |
+| in progress: add authentication to access admin section |
+| in progress: User can disable orders of a drink. Drink will still appear in list with disable button that says "out of stock" |
+| in progress: User can edit an existing drink on list |
+| in progress: User can delete an existing drink on list |
 
-## Support and contact details
+| Other User Stories |
+|----|
+| If User enters an invalid route in the URL, they are greeted by an Error404 page |
+| in progress: ABV, Price, and Remaining amount for each drink will be color coded to reflect high, medium, and low value ranges |
 
-_For feedback, please contact Catherine Bradley at catherinetybradley@gmail.com_
+
+## Setup/Installation Requirements
+
+1. clone this repository
+2. navigate to project root directory
+3. type **npm install**
+4. type **npm run start**
+5. navigate to localhost:8080
+
+
+<img src="src/assets/images/componentTree.png" alt="drawing" width="550"/>
+
+
+## Technologies Used
+* _ReactJS_
+* _webpack-npm_
+* _Bootstrap_

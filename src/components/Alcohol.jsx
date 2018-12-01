@@ -12,7 +12,7 @@ function Alcohol(props){
       <td>{props.abv}</td>
       <td>{props.price}</td>
       <td>{props.remaining}</td>
-      <td><button className="btn btn-danger" onClick={props.onOrderConfirmation}>Order</button></td>
+      <td><button className="btn btn-danger" onClick={() => {props.onOrderSelection;}}>Order</button></td>
     </tr>
   );
 }
@@ -23,11 +23,8 @@ Alcohol.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string,
   price: PropTypes.string,
-  remaining: PropTypes.string,
-};
-
-Alcohol.propTypes = {
-  onOrderConfirmation: PropTypes.func
+  remaining: PropTypes.int,
+  onOrderSelection: PropTypes.func
 };
 
 export default Alcohol;
