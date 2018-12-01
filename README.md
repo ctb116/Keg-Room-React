@@ -37,7 +37,7 @@ A menu for patrons to order drinks at the Cocoroco Bar.
 5. navigate to localhost:8080
 
 
-<img src="src/assests/images/screenshot.png" alt="drawing" width="550"/>
+<img src="src/assests/images/componentTree.png" alt="drawing" width="550"/>
 
 
 ## Technologies Used
