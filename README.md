@@ -1,4 +1,4 @@
-# Alcoholic Drinks Available at the Cocoroco Bar
+# Alcoholic Drinks Menu at the Cocoroco Bar
 
 Created 11.01.18</br>
 By _**Catherine Bradley**_</br>
@@ -37,7 +37,7 @@ A menu for patrons to order drinks at the Cocoroco Bar.
 5. navigate to localhost:8080
 
 
-<img src="src/assets/images/componentTree.png" alt="drawing" width="550"/>
+<img src="src/assests/images/screenshot.png" alt="drawing" width="550"/>
 
 
 ## Technologies Used
